@@ -16,7 +16,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	int	i;
 
 	i = 0;
-	while (size)
+	while (size - 1)
 	{
 		dst[i] = src[i];
 		i++;
@@ -28,10 +28,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 int	main(void)
 {
-	char src[6] = "hello";
-	char dest[6];
-	ft_strlcpy(dest, src, 5);
-	// printf("%ld ", ft_strlcpy(dest, src, 0));
-	printf("%ld ", strlcpy(dest, src, 0));
-	printf("%d", dest[0]);
+	char	*src;
+	char	dest[6];
+	char	dest2[6];
+
+	src = "";
+	ft_strlcpy(dest2, src, 5);
+	printf("%ld ", strlcpy(dest, src, 5));
+	printf("%ld ", ft_strlcpy(dest, src, 5));
+	printf("%s-%s", dest, dest2);
 }
+
+// gcc -o test file.c -lbsd
