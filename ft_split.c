@@ -42,6 +42,7 @@ char *get_next_word(char const *str, char charset)
 		word[i] = str[i];
 		i++;
 	}
+	word[i] = '\0';
 	return word;
 }
 
@@ -49,26 +50,40 @@ char **ft_split(char const *s, char c)
 {
 	int i;
 	int count;
-	// char result[i];
+	char **result;
 
-	count = get_array_size(s, c);
 	i = 0;
-	printf("%d", count);
-	// get_next_word(s, c);
-	// while (*s)
-	// {
-	// 	if (check_c(*s, c))
-	// 	{
+	count = get_array_size(s, c);
+	result = malloc((count + 1) * sizeof(char *));
+	while (*s)
+	{
+		while (*s && check_c(*s, c))
+			s++;
+		if (*s && !check_c(*s, c))
+		{
+			result[i] = get_next_word(s, c);
+			i++;
+		}
+		while (*s && !check_c(*s, c))
+			s++;
 
-	// 	}
-	// 	s++;
-	// }
-
+	}
+	result[i] = '\0';
+	// printf("%d\n", count + 1);
+	// printf("%d ", result[0][5]);
+	// printf("%s ", result[1]);
+	// printf("%s ", result[2]);
+	// printf("%s ", result[3]);
+	// printf("%s", result[4]);
+	return result;
 }
 
 int main(void)
 {
-	ft_split("-salut--tu--vas-bien--", '-');
-	// char **result = ft_split("salut-tu-vas-bien", '-');
-	// printf("%s", result[0]);
+	char **result = ft_split("salut--tu--vas-bien--", '-');
+	printf("%s ", result[0]);
+	printf("%s ", result[1]);
+	printf("%s ", result[2]);
+	printf("%s ", result[3]);
+	printf("%s", result[4]);
 }
