@@ -80,7 +80,7 @@ char **ft_split(char const *s, char c)
 
 int main(void)
 {
-	char **result = ft_split("salut--tu--vas-bien--", '-');
+	char **result = ft_split("-o-salut--tu--vas-bien--", '-');
 	printf("%s ", result[0]);
 	printf("%s ", result[1]);
 	printf("%s ", result[2]);
