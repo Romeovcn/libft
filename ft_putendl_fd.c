@@ -5,9 +5,17 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);  
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
 
 int main(void)
@@ -17,6 +25,6 @@ int main(void)
 	fd = open("test.json", O_RDWR);
 	if (fd == -1)
 		write(1, "Error\n", 11);
-	ft_putchar_fd('l', fd);
+	ft_putstr_fd("hgdfkgjkfhgfkjfhgd", fd);
 	close(fd);
 }
