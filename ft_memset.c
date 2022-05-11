@@ -6,26 +6,36 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:55:12 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:55:16 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:29:05 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include <stdio.h>
 
-void	*ft_memset(void *ptr, int value, size_t count)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	while (count)
+	size_t	size;
+
+	size = n;
+	while (n)
 	{
-		*(char *)ptr = value;
-		ptr++;
-		count--;
+		*(char *)s = c;
+		s++;
+		n--;
 	}
+	return (s - size);
 }
+
+// #include <string.h>
+// #include <ctype.h>
 
 // int main(void)
 // {
-//     char str[11] = "0123456789";
-//     ft_memset(str, 65, 3);
-//     printf("%s", str);
+//     char str[5] = "allo";
+// 	printf("%p", memset(str, 31, 1));
+//     printf("%c", str[0]);
+//     printf("%c", str[1]);
+//     printf("%c", str[2]);
+//     printf("%c", str[3]);
+//     printf("%d", str[4]);
 // }

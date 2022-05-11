@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:54:45 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:53:23 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 18:25:38 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,9 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
-// int	main(void)
-// {
-// 	int	n = -2147483647;
-// 	char *result = ft_itoa(n);
-// 	printf("%s", result);
-// }
+int	main(void)
+{
+	int	n = 1054;
+	char *result = ft_itoa(n);
+	printf("%s", result);
+}

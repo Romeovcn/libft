@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 13:14:07 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:51:41 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:55:03 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 
 int	ft_isalnum(char c)
 {
-	if (c >= 65 && c <= 90 || c >= 97 && c <= 122 || c >= 48 && c <= 57)
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
 	{
 		return (8);
 	}
 	return (0);
 }
 
-int	main(void)
-{
-	char	c;
+// int	main(void)
+// {
+// 	char	c;
 
-	c = 'a';
-	printf("Result when uppercase alphabet is passed: %d", ft_isalnum(c));
-	printf("\nResult when uppercase alphabet is passed: %d", isalnum(c));
-	return (0);
-}
+// 	c = 'a';
+// 	printf("Result when uppercase alphabet is passed: %d", ft_isalnum(c));
+// 	printf("\nResult when uppercase alphabet is passed: %d", isalnum(c));
+// 	return (0);
+// }

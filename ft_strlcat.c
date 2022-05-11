@@ -6,16 +6,15 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 18:04:42 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:57:35 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:14:39 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <bsd/string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -28,8 +27,10 @@ int	ft_strlen(char *str)
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	dst_len;
+	int	src_len;
 
 	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	while (*dst)
 		dst++;
 	while ((size - dst_len - 1) && *src)
@@ -40,19 +41,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		src++;
 	}
 	dst = 0;
+	return (dst_len + src_len);
 }
 
 // int	main(void)
 // {
-// 	char	src[6];
-// 	char	dst[20];
-// 	char	dst2[20];
+// 	char	src[6] = "hello";
+// 	char	dst[20] = "bonjor";
+// 	char	dst2[20] = "bonjor";
 
-// 	src[6] = "hello\0";
-// 	dst[20] = "bonjour\0";
-// 	dst2[20] = "bonjour\0";
-// 	strlcat(dst, src, 12);
-// 	ft_strlcat(dst2, src, 12);
-// 	printf("%s-%s", dst, dst2);
+// 	printf("%ld\n", strlcat(dst, src, 12));
+// 	printf("%ld\n", ft_strlcat(dst2, src, 12));
+// 	printf("%s-", dst);
+// 	printf("%s", dst2);
 // 	return (0);
 // }

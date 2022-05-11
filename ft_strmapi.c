@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:51:01 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:58:09 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:55:40 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-char	ft_test(unsigned int i, char c)
-{
-	char	d;
+// char	ft_test(unsigned int i, char c)
+// {
+// 	char	d;
 
-	d = c + 1;
-	return (d);
-}
+// 	d = c + 1;
+// 	return (d);
+// }
 
 // int	main(void)
 // {

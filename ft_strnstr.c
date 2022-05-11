@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:51:07 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:58:38 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:58:16 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,9 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 
 char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {
-	int	size;
-	int	count;
-	int	i;
+	long unsigned int	count;
 
-	size = ft_strlen(str2);
 	count = 0;
-	i = 0;
 	if (*str2 == 0)
 		return ((char *)str1);
 	while (*str1 && count <= len)

@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:34 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:56:33 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 18:13:25 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,17 @@ char	*get_next_word(char const *str, char charset)
 
 	count = 0;
 	i = 0;
-	while (!check_c(str[count], charset))
+	while (str[count] && !check_c(str[count], charset))
 		count++;
 	word = malloc((count + 1) * sizeof(char));
-	while (!check_c(str[i], charset))
+	if (word == NULL)
+		return (0);
+	while (str[i] && !check_c(str[i], charset))
 	{
 		word[i] = str[i];
 		i++;
 	}
-	word[i] = '\0';
+	word[i] = 0;
 	return (word);
 }
 
@@ -69,6 +71,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	count = get_array_size(s, c);
 	result = malloc((count + 1) * sizeof(char *));
+	if (result == NULL)
+		return (0);
 	while (*s)
 	{
 		while (*s && check_c(*s, c))
@@ -81,16 +85,26 @@ char	**ft_split(char const *s, char c)
 		while (*s && !check_c(*s, c))
 			s++;
 	}
-	result[i] = '\0';
+	result[i] = NULL;
 	return (result);
 }
 
 // int	main(void)
 // {
-// 	char **result = ft_split("-o-salut--tu--vas-bien--", '-');
-// 	printf("%s ", result[0]);
-// 	printf("%s ", result[1]);
-// 	printf("%s ", result[2]);
-// 	printf("%s ", result[3]);
-// 	printf("%s", result[4]);
+// 	char **result = ft_split("lorem ipsum dolor sit amet,
+// 			consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// 	printf("\n\n");
+// 	printf("%s\n", result[0]);
+//  	printf("%s\n", result[1]);
+//  	printf("%s\n", result[2]);
+// 		printf("%s\n", result[3]);
+// 		printf("%s\n", result[4]);
+// 		printf("%s\n", result[5]);
+// 		printf("%s\n", result[6]);
+// 		printf("%s\n", result[7]);
+// 		printf("%s\n", result[8]);
+// 	rintf("%s\n", result[9]);
+// 		printf("%s\n", result[10]);
+//  	printf("%s\n", result[11]);
+// 	free(result);
 // }
