@@ -1,18 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/11 11:50:34 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/11 11:56:33 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-int check_c(char c, char charset)
+int	check_c(char c, char charset)
 {
 	if (c == charset)
-		return 1;
-	return 0;
+		return (1);
+	return (0);
 }
 
-int get_array_size(char const *str, char charset)
+int	get_array_size(char const *str, char charset)
 {
-	int count;
-	int i = 0;
+	int	count;
+	int	i;
+
+	i = 0;
 	count = 0;
 	while (str[i])
 	{
@@ -23,14 +37,14 @@ int get_array_size(char const *str, char charset)
 		while (!check_c(str[i], charset) && str[i])
 			i++;
 	}
-	return count;
+	return (count);
 }
 
-char *get_next_word(char const *str, char charset)
+char	*get_next_word(char const *str, char charset)
 {
-	char *word;
-	int count;
-	int i;
+	char	*word;
+	int		count;
+	int		i;
 
 	count = 0;
 	i = 0;
@@ -43,14 +57,14 @@ char *get_next_word(char const *str, char charset)
 		i++;
 	}
 	word[i] = '\0';
-	return word;
+	return (word);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int i;
-	int count;
-	char **result;
+	int		i;
+	int		count;
+	char	**result;
 
 	i = 0;
 	count = get_array_size(s, c);
@@ -66,24 +80,17 @@ char **ft_split(char const *s, char c)
 		}
 		while (*s && !check_c(*s, c))
 			s++;
-
 	}
 	result[i] = '\0';
-	// printf("%d\n", count + 1);
-	// printf("%d ", result[0][5]);
-	// printf("%s ", result[1]);
-	// printf("%s ", result[2]);
-	// printf("%s ", result[3]);
-	// printf("%s", result[4]);
-	return result;
+	return (result);
 }
 
-int main(void)
-{
-	char **result = ft_split("-o-salut--tu--vas-bien--", '-');
-	printf("%s ", result[0]);
-	printf("%s ", result[1]);
-	printf("%s ", result[2]);
-	printf("%s ", result[3]);
-	printf("%s", result[4]);
-}
+// int	main(void)
+// {
+// 	char **result = ft_split("-o-salut--tu--vas-bien--", '-');
+// 	printf("%s ", result[0]);
+// 	printf("%s ", result[1]);
+// 	printf("%s ", result[2]);
+// 	printf("%s ", result[3]);
+// 	printf("%s", result[4]);
+// }

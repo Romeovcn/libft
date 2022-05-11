@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/11 11:50:52 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/11 11:57:50 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <bsd/string.h>
 #include <stdio.h>
 
@@ -26,17 +38,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
-int	main(void)
-{
-	char	*src;
-	char	dest[6];
-	char	dest2[6];
+// int	main(void)
+// {
+// 	char	*src;
+// 	char	dest[6];
+// 	char	dest2[6];
 
-	src = "";
-	ft_strlcpy(dest2, src, 5);
-	printf("%ld ", strlcpy(dest, src, 5));
-	printf("%ld ", ft_strlcpy(dest, src, 5));
-	printf("%s-%s", dest, dest2);
-}
+// 	src = "";
+// 	ft_strlcpy(dest2, src, 5);
+// 	printf("%ld ", strlcpy(dest, src, 5));
+// 	printf("%ld ", ft_strlcpy(dest, src, 5));
+// 	printf("%s-%s", dest, dest2);
+// }
 
 // gcc -o test file.c -lbsd

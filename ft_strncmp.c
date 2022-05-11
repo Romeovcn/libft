@@ -6,13 +6,13 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:21:04 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/05 12:21:04 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 11:58:22 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <unistd.h>
 #include <string.h>
+#include <unistd.h>
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -31,8 +31,8 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (i);
 }
 
-int main(void)
-{
-	printf("%d-", strncmp("bonjour", "boojour", 3));
-	printf("%d", ft_strncmp("bonjour", "boojour", 3));
-}
+// int main(void)
+// {
+// 	printf("%d-", strncmp("bonjour", "boojour", 3));
+// 	printf("%d", ft_strncmp("bonjour", "boojour", 3));
+// }

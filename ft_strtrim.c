@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:23:32 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/10 11:30:54 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/11 11:59:15 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,17 +67,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i_end--;
 	}
 	result = malloc((total_size - i_start) - (total_size - i_end) + 1);
-	// printf("%d\n", (total_size - i_start) - (total_size - i_end) + 1);
 	while (i_start < i_end)
 		result[i++] = s1[i_start++];
 	result[i] = 0;
 	return (result);
 }
 
-int	main(void)
-{
-	char	*result;
+// int	main(void)
+// {
+// 	char	*result;
 
-	result = ft_strtrim("", "");
-	printf("%s", result);
-}
+// 	result = ft_strtrim("", "");
+// 	printf("%s", result);
+// }
