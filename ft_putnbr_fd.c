@@ -34,7 +34,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (nb > 9)
 	{
-		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(nb / 10, fd);
 		nb = nb % 10;
 	}
 	ft_putchar(nb + '0', fd);
@@ -47,6 +47,6 @@ void	ft_putnbr_fd(int n, int fd)
 // 	fd = open("test.json", O_RDWR);
 // 	if (fd == -1)
 // 		write(1, "Error\n", 11);
-// 	ft_putnbr_fd(2567, fd);
+// 	ft_putnbr_fd(-2147483648, fd);
 // 	close(fd);
 // }
