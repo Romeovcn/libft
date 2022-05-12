@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 13:20:21 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 12:01:40 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 17:43:19 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,27 @@
 
 void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
-	while (size)
+	int	count;
+
+	count = size;
+	while (count)
 	{
 		*(char *)destination = *(char *)source;
 		destination++;
 		source++;
-		size--;
+		count--;
 	}
-	return (destination);
+	return (destination - size);
 }
 
 // int	main(void)
 // {
-// 	char str[11] = "0123456789";
-// 	char dest[11];
-// 	ft_memcpy(dest, str, 11);
-// 	printf("%s", dest);
+// 	char str[] = "zyxwvutsrqponmlkjihgfedcba";
+// 	char dest[30];
+// 	char dest2[30];
+// 	char *adress = ft_memcpy(dest, str, 14);
+// 	printf("%s\n", adress);
+// 	// printf("%p\n", memcpy(dest2, str, 14));
+// 	// printf("%s\n", dest);
+// 	// printf("%s", dest2);
 // }
