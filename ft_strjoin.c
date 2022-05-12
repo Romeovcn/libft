@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:47 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:57:24 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:57:42 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	printf("%ld\n", (ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	result = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	while (s1[i])
 	{
@@ -53,6 +52,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 // int	main(void)
 // {
-// 	char *result = ft_strjoin("Fun's fun", " but who needs it ?");
+// 	char	s1[] = "lorem ipsum";
+// 	char	s2[] = "dolor sit amet";
+// 	char *result = ft_strjoin(s1, s2);
 // 	printf("%s", result);
 // }

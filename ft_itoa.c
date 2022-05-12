@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:54:45 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 18:25:38 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:50:26 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,55 +32,57 @@ int	get_size(int n)
 	return (count);
 }
 
-char	*get_value(char *result, long int n, int i)
+void	ft_revstr(char *str, int size)
 {
-	int			power;
-	long int	nbr;
+	int		i;
+	int		len;
+	char	swap;
 
-	power = 1;
-	nbr = n;
-	while (n > 0)
+	i = 0;
+	len = size;
+	while (i < size / 2)
 	{
-		while (nbr > 9)
-		{
-			nbr = nbr / 10;
-			power = power * 10;
-		}
-		result[i] = nbr + '0';
-		n = n - (nbr * power);
-		nbr = n;
-		power = 1;
+		swap = str[i];
+		str[i] = str[len - 1];
+		str[len - 1] = swap;
 		i++;
+		len--;
 	}
-	return (result);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		count;
+	long	nbr;
+	int		size;
 	int		i;
 
-	count = 0;
+	if (n == 0)
+		return ("0");
+	nbr = n;
+	size = 0;
 	i = 0;
-	if (n == -2147483648)
-		return ("-2147483648");
-	count = get_size(n);
-	result = malloc((count + 1) * sizeof(char));
 	if (n < 0)
+		nbr = nbr * -1;
+	size = get_size(n);
+	result = malloc((size + 1) * sizeof(char));
+	while (nbr)
 	{
-		result[i] = '-';
+		result[i] = (nbr % 10) + '0';
+		nbr = nbr / 10;
 		i++;
-		n = n * -1;
 	}
-	get_value(result, n, i);
-	result[count] = 0;
+	if (n < 0)
+		result[i++] = '-';
+	result[i] = 0;
+	ft_revstr(result, size);
 	return (result);
 }
 
-int	main(void)
-{
-	int	n = 1054;
-	char *result = ft_itoa(n);
-	printf("%s", result);
-}
+// int	main(void)
+// {
+// 	int	n = 0;
+// 	char *result = ft_itoa(n);
+// 	// ft_itoa(n);
+// 	printf("%s", result);
+// }
