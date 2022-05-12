@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:21:04 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:58:22 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 14:57:37 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,16 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		s1++;
 		s2++;
 	}
+	if (*s1 < 0 && *s1 != *s2)
+		return (1);
+	if (*s2 < 0 && *s1 != *s2)
+		return (-1);
 	i = *s1 - *s2;
 	return (i);
 }
 
 // int main(void)
 // {
-// 	printf("%d-", strncmp("bonjour", "boojour", 3));
-// 	printf("%d", ft_strncmp("bonjour", "boojour", 3));
+// 	printf("%d\n", strncmp("test¥", "test¥", 6));
+// 	printf("%d", ft_strncmp("test¥", "test¥", 6));
 // }

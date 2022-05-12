@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:13:24 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:58:49 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:25:34 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,24 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	while (*str)
-		str++;
-	str--;
-	while (*str != c && *str)
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	while (str[i] != c && i)
 	{
-		str--;
+		i--;
 	}
-	if (*str == c)
-		return ((char *)str);
+	if (str[i] == c)
+		return ((char *)str + (i));
 	return (NULL);
 }
 
 // int main(void)
 // {
-// 	printf("%s-", strrchr("uuuu", 117));
-// 	printf("%s", ft_strrchr("uuuu", 117));
+// 	char		str2[] = "bonjour";
+// 	printf("%s\n", ft_strrchr(str2, '\0'));
+// 	printf("%s", strrchr(str2, '\0'));
 // 	// ft_strrchr("saluuut", 117);
 // }
