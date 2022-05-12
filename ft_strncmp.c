@@ -37,6 +37,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 // int main(void)
 // {
-// 	printf("%d\n", strncmp("test¥", "test¥", 6));
-// 	printf("%d", ft_strncmp("test¥", "test¥", 6));
+// 	printf("%d\n", strncmp("t", "", 0));
+// 	printf("%d", ft_strncmp("t", "", 0));
 // }

@@ -15,16 +15,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-void	*ft_memcpy(void *destination, const void *source, size_t size)
+void	*ft_memmove( void * destination, const void * source, size_t size )
 {
-	while (size)
+	int	count;
+
+	count = size;
+	while (count)
 	{
 		*(char *)destination = *(char *)source;
 		destination++;
 		source++;
-		size--;
+		count--;
 	}
-	return (destination);
+	return (destination - size);
 }
 
 // int main(void)

@@ -21,19 +21,19 @@ char	*ft_strrchr(const char *str, int c)
 	i = 0;
 	while (str[i])
 		i++;
-	while (str[i] != c && i)
+	while (str[i] != (char)c && i)
 	{
 		i--;
 	}
-	if (str[i] == c)
+	if (str[i] == (char)c)
 		return ((char *)str + (i));
 	return (NULL);
 }
 
 // int main(void)
 // {
-// 	char		str2[] = "bonjour";
-// 	printf("%s\n", ft_strrchr(str2, '\0'));
-// 	printf("%s", strrchr(str2, '\0'));
+//	char s[] = "tripouille";
+// 	printf("%s\n", ft_strrchr(s, 't' + 256));
+// 	printf("%s", strrchr(s, 't' + 256));
 // 	// ft_strrchr("saluuut", 117);
 // }

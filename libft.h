@@ -29,7 +29,7 @@ char	*ft_itoa(int n);
 void	*ft_memchr(const void *memoryBlock, int c, size_t size);
 int		ft_memcmp(const void *pointer1, const void *pointer2, size_t size);
 void	*ft_memcpy(void *destination, const void *source, size_t size);
-void	*ft_memcpy(void *destination, const void *source, size_t size);
+void	*ft_memmove( void * destination, const void * source, size_t size );
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);

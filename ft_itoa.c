@@ -57,24 +57,24 @@ char	*ft_itoa(int n)
 	int		size;
 	int		i;
 
-	if (n == 0)
-		return ("0");
 	nbr = n;
-	size = 0;
 	i = 0;
 	if (n < 0)
 		nbr = nbr * -1;
 	size = get_size(n);
 	result = malloc((size + 1) * sizeof(char));
+	if (n == 0)
+		result[i++] = '0';
+	if (!result)
+		return (NULL);
 	while (nbr)
 	{
-		result[i] = (nbr % 10) + '0';
+		result[i++] = (nbr % 10) + '0';
 		nbr = nbr / 10;
-		i++;
 	}
 	if (n < 0)
 		result[i++] = '-';
-	result[i] = 0;
+	result[i] = '\0';
 	ft_revstr(result, size);
 	return (result);
 }
@@ -83,6 +83,6 @@ char	*ft_itoa(int n)
 // {
 // 	int	n = 0;
 // 	char *result = ft_itoa(n);
-// 	// ft_itoa(n);
-// 	printf("%s", result);
+// 	printf("%s\n", result);
+//	free(result);
 // }

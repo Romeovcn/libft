@@ -18,18 +18,19 @@ void	*ft_memchr(const void *memoryBlock, int c, size_t size)
 {
 	while (size)
 	{
-		if (*(char *)memoryBlock == c)
-			return ((char *)memoryBlock);
+		if (*(char *)memoryBlock == (char)c)
+			return ((void *)memoryBlock);
 		size--;
 		memoryBlock++;
 	}
-	return (NULL);
+	return NULL;
 }
 
 // int main(void)
 // {
-//     char data[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+//     char data[] = {0, 1, 2 ,3 ,4 ,5};
 //     const unsigned int size = 10;
-// 	char *adress = ft_memchr( data, 50, size );
+// 	char *adress = ft_memchr(data, 2 + 256, 3);
+//	//printf("%d\n", 3 + 255);
 // 	printf("%d", *adress);
 // }

@@ -30,7 +30,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	void	*result;
 	int		total_count;
 
-	if (elementCount == 0 || elementSize == 0)
+	if (elementCount == 0 || elementSize == 0 || elementCount > 2147483424 || elementSize > 2147483424)
 		return (NULL);
 	total_count = elementCount * elementSize;
 	result = malloc(total_count);
@@ -43,6 +43,7 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 // 	int i = 0;
 // 	char *str;
 // 	str = (char *)calloc(5, 1);
-// 	printf("%d", *str);
+// 	printf("%d\n", *str);
+// 	printf("%lu", SIZE_MAX);
 // 	free(str);
 // }
