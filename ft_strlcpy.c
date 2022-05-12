@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:52 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:57:50 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:38:49 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	int	i;
 
 	i = 0;
-	while (size - 1)
+	if (size == 0)
+		return (ft_strlen(src));
+	while (size - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
@@ -41,13 +43,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // int	main(void)
 // {
 // 	char	*src;
-// 	char	dest[6];
-// 	char	dest2[6];
+// 	char	dest[10] = "bonjour";
+// 	char	dest2[10] = "bonjour";
 
-// 	src = "";
-// 	ft_strlcpy(dest2, src, 5);
-// 	printf("%ld ", strlcpy(dest, src, 5));
-// 	printf("%ld ", ft_strlcpy(dest, src, 5));
+// 	src = "lorem";
+// 	printf("%ld ", strlcpy(dest, src, 15));
+// 	printf("%ld ", ft_strlcpy(dest2, src, 15));
 // 	printf("%s-%s", dest, dest2);
 // }
 
