@@ -26,26 +26,26 @@ size_t	ft_strlen(const char *str)
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
-	size_t	j;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	src_size;
+	unsigned int	dst_size;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if (size < dst_len)
-		return (src_len + size);
 	i = 0;
 	j = 0;
-	while (dst[j])
-		j++;
-	while (src[i] && size - 1 > i + j)
-	{
-		dst[j + i] = src[i];
+	src_size = ft_strlen(src);
+	dst_size = ft_strlen(dst);
+	if (dst_size > size)
+		return (src_size + size);
+	while (dst[i])
 		i++;
+	while (src[j] && i + j + 1 < size)
+	{
+		dst[i + j] = src[j];
+		j++;
 	}
-	dst[j + i] = 0;
-	return (dst_len + src_len);
+	dst[i + j] = '\0';
+	return (src_size + dst_size);
 }
 
 // #include <stdlib.h>
@@ -54,14 +54,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 // int	main(void)
 // {
-// 	// char	src[] = "lorem ipsum dolor sit amet";
-// 	// char	dst[15] = "rrrrrrrrrrrrrrr";
-// 	char	dst2[15] = "rrrrrrrrrrrrrrr";
-// // ft_strlcat(dst2, "lorem ipsum dolor sit amet", 5);
-// 	// printf("%ld\n", ft_strlcat(dst2, "lorem ipsum dolor sit amet", 5));
-// 	printf("%ld\n", ft_strlcat(dst2, "lorem ipsum dolor sit amet", 5));
-
-// 	// printf("%s\n", dst);
-// 	// printf("%s", dst2);
+//	char dest[10] = "";
+//	char dest2[10] = "";
+//	char src[] = "1234";
+//	int size = 0;
+//	printf("real : %lu\n", strlcat(dest, src, size));
+// 	printf("real : %s\n", dest);
+//	printf("%lu\n", ft_strlcat(dest2, src, size));
+// 	printf("%s\n", dest2);
 // 	return (0);
 // }

@@ -24,3 +24,5 @@ fclean:	clean
 	rm -f ${NAME}
 
 re: fclean all
+
+#bonus: ${CC} ${CFLAGS} -c $< -o ${<:.c=.o}

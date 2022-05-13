@@ -50,5 +50,12 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int character);
 int		ft_toupper(int character);
+//struct s_list *ft_lstnew(void *content);
+
+//struct s_list
+//{
+//void *content;
+//struct s_list *next;
+//};
 
 #endif
