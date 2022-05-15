@@ -31,11 +31,11 @@ int	ft_memcmp(const void *pointer1, const void *pointer2, size_t size)
 
 // int main(void)
 // {
-// 	// int array1[] = { 54, -300, 20, 63, 21 };
-//     // int array2[] = { 54, 3, 20, 63, 21 };
-// 	char array1[5] = "arr9";
-//     char array2[5] = "arr7";
+// 	 int array1[] = { 5450, 3, 20, 63, 21 };
+//      int array2[] = { 5450, 3, 20, 63, 21 };
+// 	//char array1[5] = "arr9";
+//    // char array2[5] = "arr7";
 //     size_t size = 5 * sizeof(array1[0]);
 // 	printf("%d ", ft_memcmp(array1, array2, size));
-// 	printf("%d", memcmp(array1, array2, size));
+// 	//printf("%d", memcmp(array1, array2, size));
 // }

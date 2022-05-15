@@ -2,19 +2,22 @@
 #include <stdlib.h>
 #include "libft.h"
 
-struct s_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	struct s_list *next = NULL;
-	next = malloc(sizeof(struct s_list));
-	next->content = content;
-	return next;
+	t_list *result = NULL;
+	result = malloc(sizeof(t_list));
+	result->content = content;
+	result->next = NULL;
+	return result;
 }
 
 
 //int main(int argc, char const *argv[])
 //{
-//	int result = ft_lstnew(10);
-//	printf("%d", result);
+//	char array1[] = "salut";
+
+//	t_list *result = ft_lstnew(array1);
+//	printf("%s", (char *)result->content);
 //	return 0;
 //}
 
