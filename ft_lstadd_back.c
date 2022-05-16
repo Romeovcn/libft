@@ -1,6 +1,6 @@
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
 //t_list	*ft_lstnew(void *content)
 //{
@@ -8,7 +8,7 @@
 //	result = malloc(sizeof(t_list));
 //	result->content = content;
 //	result->next = NULL;
-//	return result;
+//	return (result);
 //}
 
 //t_list *ft_lstlast(t_list *lst)
@@ -20,21 +20,20 @@
 //	head = lst;
 //	while (head->next)
 //		head = head->next;
-//	return head;
+//	return (head);
 //}
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
+
 	if (*lst)
 	{
-	last = ft_lstlast(*lst);
-	last->next = new;
-	} 
-	else
-	{
-		*lst = new;
+		last = ft_lstlast(*lst);
+		last->next = new;
 	}
+	else
+		*lst = new;
 }
 
 //int main(int argc, char const *argv[])
@@ -50,5 +49,5 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 //	ft_lstadd_back(&lst1, last);
 //	t_list *result = ft_lstlast(lst1);
 //	printf("%s", (char*)result->content);
-//	return 0;
+//	return (0);
 //}

@@ -15,25 +15,46 @@
 #include <stdlib.h>
 #include <string.h>
 
-void	*ft_memmove( void * destination, const void * source, size_t size )
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	int	count;
+	size_t		size;
+	char		*dest_end;
+	const char	*src_end;
 
-	count = size;
-	while (count)
+	size = len;
+	if ((char *)dest < (char *)src)
 	{
-		*(char *)destination = *(char *)source;
-		destination++;
-		source++;
-		count--;
+		while (size)
+		{
+			*(char *)dest++ = *(char *)src++;
+			size--;
+		}
+		return (dest - len);
 	}
-	return (destination - size);
+	else
+	{
+		dest_end = dest + (len - 1);
+		src_end = src + (len - 1);
+		while (size)
+		{
+			*(char *)dest_end-- = *(char *)src_end--;
+			size--;
+		}
+		return (dest);
+	}
 }
 
-// int main(void)
+// #define SIZE 21
+
+// char	target[SIZE] = "a shiny white sphere";
+
+// int	main(void)
 // {
-// 	char str[11] = "0123456789";
-// 	char dest[11];
-// 	ft_memcpy(dest, str, 11);
-// 	printf("%s", dest);
+// 	char *p = target + 8;      /* p points at the starting character
+//                           of the word we want to replace */
+// 	char *source = target + 2; /* start of "shiny" */
+
+// 	printf("Before memmove, target is \"%s\"\n", target);
+// 	ft_memmove(p, source, 5);
+// 	printf("After memmove, target becomes \"%s\"\n", target);
 // }
