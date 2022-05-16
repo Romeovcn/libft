@@ -4,19 +4,20 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *result = NULL;
+	t_list *result;
 	result = malloc(sizeof(t_list));
+	if (!result)
+		return (0);
 	result->content = content;
 	result->next = NULL;
-	return result;
+	return (result);
 }
 
 //int main(int argc, char const *argv[])
 //{
-//	char array1[] = "salut";
-
+//	char *array1 = 0;
 //	t_list *result = ft_lstnew(array1);
 //	printf("%s", (char *)result->content);
-//	return 0;
+//	return (0);
 //}
 
