@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:52 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/12 15:38:49 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/16 12:04:20 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 	char	dest2[10] = "bonjour";
 
 // 	src = "lorem";
-// 	printf("%ld ", strlcpy(dest, src, 15));
-// 	printf("%ld ", ft_strlcpy(dest2, src, 15));
+// 	printf("%ld ", strlcpy(dest, src, 0));
+// 	printf("%ld ", ft_strlcpy(dest2, src, 0));
 // 	printf("%s-%s", dest, dest2);
 // }
 

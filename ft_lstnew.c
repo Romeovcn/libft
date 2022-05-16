@@ -11,7 +11,6 @@ t_list	*ft_lstnew(void *content)
 	return result;
 }
 
-
 //int main(int argc, char const *argv[])
 //{
 //	char array1[] = "salut";
