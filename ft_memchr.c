@@ -23,7 +23,7 @@ void	*ft_memchr(const void *memoryBlock, int c, size_t size)
 		size--;
 		memoryBlock++;
 	}
-	return NULL;
+	return (NULL);
 }
 
 // int main(void)

@@ -19,6 +19,8 @@ int	get_size(int n)
 	int	count;
 
 	count = 0;
+	if (n == 0)
+		count = 1;
 	if (n < 0)
 	{
 		n = n * -1;

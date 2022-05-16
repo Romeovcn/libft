@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -59,13 +60,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	total_size = ft_strlen(s1);
 	i = 0;
 	while (ft_check_set_forward(s1[i_start], set))
-	{
 		i_start++;
+	if (i_start == total_size)
+	{
+		result = malloc(1);
+		result[0] = 0;
+		return (result);
 	}
 	while (ft_check_set_backward(s1[i_end - 1], set))
-	{
 		i_end--;
-	}
 	result = malloc((total_size - i_start) - (total_size - i_end) + 1);
 	while (i_start < i_end)
 		result[i++] = s1[i_start++];
@@ -75,8 +78,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int	main(void)
 // {
-// 	char	*result;
-
-// 	result = ft_strtrim("", "");
-// 	printf("%s", result);
+//		//char s1[] = "          ";
+//		char *result = ft_strtrim("   xxx   xxx", " ");
+//		printf("%s", result);
 // }
