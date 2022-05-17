@@ -17,7 +17,6 @@ CFLAGS	= -Wall -Werror -Wextra
 	
 ${NAME}:	${OBJS}
 	ar rcs ${NAME} ${OBJS}
-	ranlib ${NAME}
 
 all:	${NAME}
 
@@ -29,5 +28,7 @@ fclean:	clean
 
 re: fclean all
 
-bonus : ${OBJS} ${OBJSB}
+bonus: ${OBJS} ${OBJSB}
 	ar rcs ${NAME} ${OBJS} ${OBJSB}
+
+.PHONY:	all clean fclean re bonus
