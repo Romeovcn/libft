@@ -14,23 +14,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strdup(const char *source)
 {
 	char	*copy;
 	int		i;
 
-	copy = malloc(ft_strlen(source) * sizeof(char) + 1);
+	copy = malloc((ft_strlen(source) + 1) * sizeof(char) + 1);
 	i = 0;
 	while (source[i])
 	{

@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int	ft_get_size(char const *s, unsigned int start, size_t len)
+static int	ft_get_size(char const *s, unsigned int start, size_t len)
 {
 	int				count;
 	unsigned int	size;

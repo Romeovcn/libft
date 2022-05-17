@@ -13,33 +13,7 @@
 //#include <bsd/string.h>
 #include <stdio.h>
 #include <unistd.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
-{
-	unsigned int	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (n - 1 && *s1 && *s1 == *s2)
-	{
-		n--;
-		s1++;
-		s2++;
-	}
-	i = *s1 - *s2;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *str1, const char *str2, size_t len)
 {

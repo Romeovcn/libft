@@ -15,7 +15,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void	ft_set_zero(void *result, int total_count)
+static void	ft_set_zero(void *result, int total_count)
 {
 	while (total_count)
 	{

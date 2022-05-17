@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int	get_size(int n)
+static int	get_size(int n)
 {
 	int	count;
 
@@ -34,7 +34,7 @@ int	get_size(int n)
 	return (count);
 }
 
-void	ft_revstr(char *str, int size)
+static void	ft_revstr(char *str, int size)
 {
 	int		i;
 	int		len;

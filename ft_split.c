@@ -14,14 +14,14 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int	check_c(char c, char charset)
+static int	check_c(char c, char charset)
 {
 	if (c == charset)
 		return (1);
 	return (0);
 }
 
-int	get_array_size(char const *str, char charset)
+static int	get_array_size(char const *str, char charset)
 {
 	int	count;
 	int	i;
@@ -40,7 +40,7 @@ int	get_array_size(char const *str, char charset)
 	return (count);
 }
 
-char	*get_next_word(char const *str, char charset)
+static char	*get_next_word(char const *str, char charset)
 {
 	char	*word;
 	int		count;

@@ -15,17 +15,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-int	ft_check_set_forward(char s1, char const *set)
+static int	ft_check_set_forward(char s1, char const *set)
 {
 	while (*set)
 	{
@@ -36,7 +26,7 @@ int	ft_check_set_forward(char s1, char const *set)
 	return (0);
 }
 
-int	ft_check_set_backward(char s1, char const *set)
+static int	ft_check_set_backward(char s1, char const *set)
 {
 	while (*set)
 	{

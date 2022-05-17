@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h> // <cctype> en C++
+#include <ctype.h>
 #include <stdio.h>
 
 int	ft_isdigit(char c)

@@ -13,16 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
