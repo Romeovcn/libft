@@ -1,47 +1,27 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/17 13:22:42 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/17 13:22:44 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
+#include <unistd.h>
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *result = NULL;
-	result = malloc(sizeof(t_list));
-	result->content = content;
-	result->next = NULL;
-	return (result);
-}
+	t_list	*result;
+	t_list	*temp;
 
-t_list *ft_lstlast(t_list *lst)
-{
-	t_list *head;
-
-	if (lst == NULL)
-		return (0);
-	head = lst;
-	while (head->next)
-		head = head->next;
-	return (head);
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*last;
-
-	if (*lst)
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
-	else
-		*lst = new;
-}
-
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-{
-	t_list *result = NULL;
-	t_list *temp;
+	result = NULL;
 	if (!lst)
 		del(lst);
 	while (lst)
@@ -56,9 +36,9 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			result = temp;
 		else
 			ft_lstadd_back(&result, temp);
-		lst =  lst->next;
+		lst = lst->next;
 	}
-	return result;
+	return (result);
 }
 
 //void	*ft_map(void *ct)

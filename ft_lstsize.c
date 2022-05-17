@@ -1,26 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/17 13:22:24 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/17 13:22:25 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
-//t_list	*ft_lstnew(void *content)
-//{
-//	t_list *result = NULL;
-//	result = malloc(sizeof(t_list));
-//	result->content = content;
-//	result->next = NULL;
-//	return result;
-//}
-
-//void	ft_lstadd_front(t_list **lst, t_list *new)
-//{
-//	new->next = *lst;
-//	*lst = new;
-//}
-
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int count;
-	t_list *head;
+	int		count;
+	t_list	*head;
 
 	count = 0;
 	head = lst;
@@ -29,7 +26,7 @@ int ft_lstsize(t_list *lst)
 		head = head->next;
 		count++;
 	}
-	return count;
+	return (count);
 }
 
 //int main(int argc, char const *argv[])
@@ -42,5 +39,5 @@ int ft_lstsize(t_list *lst)
 //	ft_lstadd_front(&lst1, lst2);
 //	ft_lstsize(lst2);
 //	//printf("%s", (char*)lst2->next->content);
-//	return 0;
+//	return (0);
 //}

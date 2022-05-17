@@ -6,10 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:51:15 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/12 14:37:53 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:21:39 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -43,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	result = malloc((size + 1) * sizeof(char));
 	if (result == 0)
 		return (NULL);
-	while (s[start] && len && size)
+	while (size && s[start] && len)
 	{
 		result[i] = s[start];
 		i++;
@@ -57,7 +58,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main(void)
 // {
-// 	char	str[] = "lorem ipsum dolor sit amet";
-// 	char *result = ft_substr(str, 400, 20);
+// 	// char * str = ft_strdup("1");
+// 	char *result = ft_substr("tripouille", 100, 1);
 // 	printf("%s", result);
 // }

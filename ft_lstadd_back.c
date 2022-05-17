@@ -1,27 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/17 13:23:19 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/17 13:23:26 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-//t_list	*ft_lstnew(void *content)
-//{
-//	t_list *result = NULL;
-//	result = malloc(sizeof(t_list));
-//	result->content = content;
-//	result->next = NULL;
-//	return (result);
-//}
-
-//t_list *ft_lstlast(t_list *lst)
-//{
-//	t_list *head;
-
-//	if (lst == NULL)
-//		return (0);
-//	head = lst;
-//	while (head->next)
-//		head = head->next;
-//	return (head);
-//}
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

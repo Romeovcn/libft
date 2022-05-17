@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:21:04 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/12 14:57:37 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:21:51 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #include <string.h>
 #include <unistd.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t length)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (n == 0)
+	if (length == 0)
 		return (0);
-	while (n - 1 && *s1 && *s1 == *s2)
+	while (length - 1 && *s1 && *s1 == *s2)
 	{
-		n--;
+		length--;
 		s1++;
 		s2++;
 	}
@@ -37,6 +37,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 // int main(void)
 // {
-// 	printf("%d\n", strncmp("t", "", 0));
-// 	printf("%d", ft_strncmp("t", "", 0));
+// 	printf("%d\n", strncmp("test/200", "test¥", 6));
+// 	printf("%d", ft_strncmp("test¥", "test¥", 6));
 // }

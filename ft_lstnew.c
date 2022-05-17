@@ -1,10 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/17 13:22:35 by rvincent          #+#    #+#             */
+/*   Updated: 2022/05/17 13:22:37 by rvincent         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *result;
+	t_list	*result;
+
 	result = malloc(sizeof(t_list));
 	if (!result)
 		return (0);
@@ -13,11 +26,14 @@ t_list	*ft_lstnew(void *content)
 	return (result);
 }
 
-//int main(int argc, char const *argv[])
-//{
-//	char *array1 = 0;
-//	t_list *result = ft_lstnew(array1);
-//	printf("%s", (char *)result->content);
-//	return (0);
-//}
-
+// int main(int argc, char const *argv[])
+// {
+// 	t_list *lst1 = ft_lstnew("salut");
+// 	lst1->next = ft_lstnew("salut2");
+// 	while (lst1)
+// 	{
+// 		printf("%s\n", (char *)lst1->content);
+// 		lst1 = lst1->next;
+// 	}
+// 	return (0);
+// }
