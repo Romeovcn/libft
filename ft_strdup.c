@@ -21,7 +21,7 @@ char	*ft_strdup(const char *source)
 	char	*copy;
 	int		i;
 
-	copy = malloc((ft_strlen(source) + 1) * sizeof(char) + 1);
+	copy = malloc((ft_strlen(source) + 1) * sizeof(char));
 	i = 0;
 	while (source[i])
 	{
