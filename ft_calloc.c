@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:49:44 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/17 12:33:07 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:54:22 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,18 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 	void	*result;
 	int		total_count;
 
+	result = NULL;
 	total_count = elementCount * elementSize;
 	if (elementCount == 0 || elementSize == 0)
-		return (NULL);
+	{
+		result = malloc(0);
+		return (result);
+	}
 	if (total_count / elementCount != elementSize)
-		return (NULL);
+		return (result);
 	result = malloc(total_count);
-	ft_set_zero(result, total_count);
+	if (result)
+		ft_set_zero(result, total_count);
 	return (result);
 }
 
