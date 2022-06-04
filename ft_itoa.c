@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:54:45 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/12 12:50:26 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/06/05 00:24:45 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,77 +14,52 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-static int	get_size(int n)
+int	ft_get_size(long nbr)
 {
 	int	count;
 
-	count = 0;
-	if (n == 0)
-		count = 1;
-	if (n < 0)
+	count = 1;
+	if (nbr < 0)
 	{
-		n = n * -1;
 		count++;
+		nbr = -nbr;
 	}
-	while (n)
+	while (nbr > 9)
 	{
-		n = n / 10;
+		nbr = nbr / 10;
 		count++;
 	}
 	return (count);
 }
 
-static void	ft_revstr(char *str, int size)
+void	put_in_string(char *r, int nbr, int *i)
 {
-	int		i;
-	int		len;
-	char	swap;
+	long	n;
 
-	i = 0;
-	len = size;
-	while (i < size / 2)
+	n = nbr;
+	if (n < 0)
 	{
-		swap = str[i];
-		str[i] = str[len - 1];
-		str[len - 1] = swap;
-		i++;
-		len--;
+		r[*i] = '-';
+		(*i)++;
+		n = -n;
 	}
+	if (n > 9)
+	{
+		put_in_string(r, n / 10, i);
+		n = n % 10;
+	}
+	r[*i] = n + '0';
+	(*i)++;
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int nbr)
 {
 	char	*result;
-	long	nbr;
-	int		size;
 	int		i;
 
-	nbr = n;
 	i = 0;
-	if (n < 0)
-		nbr = nbr * -1;
-	size = get_size(n);
-	result = malloc((size + 1) * sizeof(char));
-	if (n == 0)
-		result[i++] = '0';
-	if (!result)
-		return (NULL);
-	while (nbr)
-	{
-		result[i++] = (nbr % 10) + '0';
-		nbr = nbr / 10;
-	}
-	if (n < 0)
-		result[i++] = '-';
-	result[i] = '\0';
-	ft_revstr(result, size);
+	result = malloc((ft_get_size(nbr) + 1) * sizeof(char));
+	put_in_string(result, nbr, &i);
+	result[i] = 0;
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	int	n = 0;
-// 	char *result = ft_itoa(n);
-// 	printf("%s\n", result);
-//	free(result);
-// }

@@ -6,14 +6,14 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:23:32 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:59:15 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/06/05 00:25:03 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "libft.h"
 
 static int	ft_check_set_forward(char s1, char const *set)
 {
