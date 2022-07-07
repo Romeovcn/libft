@@ -36,7 +36,7 @@ $(OBJSDIR):
 	@mkdir ${OBJSDIR}
 
 ${OBJSDIR}/%.o: ${SRCSDIR}/%.c
-	@${CC} -I. -c $< -o $@
+	@${CC} ${CFLAGS} -I. -c $< -o $@
 
 clean:
 	@rm -rf ${OBJS} $(OBJSDIR)
