@@ -26,21 +26,24 @@ CC	= gcc
 
 CFLAGS	= -Wall -Werror -Wextra 
 
-${NAME}:	${OBJS} ${HEADERS} Makefile
+${NAME}:	${OBJSDIR} ${OBJS} ${HEADERS} Makefile
 	@ar rcs ${NAME} ${OBJS}
 	@echo "Libft compiled !"
 
 all:	${NAME}
 
+$(OBJSDIR):
+	@mkdir ${OBJSDIR}
+
 ${OBJSDIR}/%.o: ${SRCSDIR}/%.c
-	@${CC} -I includes -c $< -o $@
+	@${CC} -I. -c $< -o $@
 
 clean:
-	@rm -f ${OBJS}
+	@rm -rf ${OBJS} $(OBJSDIR)
 
 fclean:	clean
 	@rm -f ${NAME}
 
 re: fclean all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re
