@@ -14,25 +14,28 @@ get_next_line.c get_next_line_utils.c
 
 OBJS	= ${SRCS:.c=.o}
 
+LIBS	= libft.h get_next_line.h ft_printf.h
+
 NAME	= libft.a
 
 CC	= gcc
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra 
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 	
-${NAME}:	${OBJS}
-	ar rcs ${NAME} ${OBJS}
+${NAME}:	${OBJS} ${LIBS}
+	@ar rcs ${NAME} ${OBJS}
+	@echo "Libft compiled !"
 
 all:	${NAME}
 
 clean:
-	rm -f ${OBJS}
+	@rm -f ${OBJS}
 
 fclean:	clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
 
