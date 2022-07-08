@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:34 by rvincent          #+#    #+#             */
-/*   Updated: 2022/06/05 00:22:31 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/07/08 21:31:34 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
-	result[i] = 0;
+	*result = 0;
 	return (result);
 }
 
