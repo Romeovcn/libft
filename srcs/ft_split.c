@@ -19,8 +19,10 @@ static int	get_array_size(char const *str, char charset)
 	int	count;
 
 	count = 0;
-	while (*str && str++)
+	while (*str)
 	{
+		while (*str && *str == charset)
+			str++;
 		if (*str != charset && *str)
 			count++;
 		while (*str != charset && *str)
@@ -70,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
-	*result = 0;
+	result[i] = 0;
 	return (result);
 }
 
