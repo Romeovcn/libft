@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:07:29 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 16:37:43 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:52:16 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	long int	result;
+	long		result;
 	int			i;
 	int			n;
 
@@ -45,9 +45,5 @@ int	ft_atoi(const char *str)
 
 // int	main(void)
 // {
-// 	const char	*str;
-
-// 	str = "\n\n\n  -46\b9 \n5d6";
-// 	printf("%d\n", atoi(str));
-// 	printf("%d", ft_atoi(str));
+// 	printf("%ld\n", ft_atoi("2147483648"));
 // }

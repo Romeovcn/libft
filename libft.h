@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:23:39 by rvincent          #+#    #+#             */
-/*   Updated: 2022/07/07 22:40:45 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:52:04 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_list
 }					t_list;
 
 void				*ft_memset(void *s, int c, size_t n);
-int					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 void				ft_bzero(void *ptr, size_t n);
 void				*ft_calloc(size_t elementCount, size_t elementSize);
 int					ft_isalnum(char c);
