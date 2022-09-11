@@ -6,14 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:49:44 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/19 12:54:22 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:05 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 static void	ft_set_zero(void *result, int total_count)
 {
@@ -53,3 +50,5 @@ void	*ft_calloc(size_t elementCount, size_t elementSize)
 // 	// printf("%s\n", str);
 // 	free(str);
 // }
+
+// alloc memory and write null byte

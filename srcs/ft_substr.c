@@ -6,14 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:51:15 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/17 13:21:39 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:19:14 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 static int	ft_get_size(char const *s, unsigned int start, size_t len)
 {

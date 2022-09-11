@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:22:35 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/17 13:22:37 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:43 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

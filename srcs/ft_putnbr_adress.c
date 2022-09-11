@@ -6,12 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 02:25:19 by rvincent          #+#    #+#             */
-/*   Updated: 2022/06/05 00:41:00 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:17:55 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <unistd.h>
 
 static int	ft_putnbr_base(unsigned long nb, unsigned long b, char *base)
 {

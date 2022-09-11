@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 15:54:45 by rvincent          #+#    #+#             */
-/*   Updated: 2022/06/05 00:24:45 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:22 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_get_size(long nbr)
 {

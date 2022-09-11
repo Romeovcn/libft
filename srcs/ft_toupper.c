@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 18:14:57 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:59:48 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:19:25 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_toupper(int character)
 {

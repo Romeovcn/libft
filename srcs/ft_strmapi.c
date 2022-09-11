@@ -6,13 +6,10 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:51:01 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 14:55:40 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:18:52 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

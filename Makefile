@@ -24,7 +24,7 @@ NAME	= libft.a
 
 CC	= gcc
 
-CFLAGS	= -Wall -Werror -Wextra 
+CFLAGS	=  
 
 ${NAME}:	${OBJSDIR} ${OBJS} ${HEADERS} Makefile
 	@ar rcs ${NAME} ${OBJS}

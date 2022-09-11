@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:36:19 by rvincent          #+#    #+#             */
-/*   Updated: 2022/06/05 15:29:09 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:45:27 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ int	get_buffer(int fd, char *buffer, t_list_char **result)
 	i = 0;
 	while (read(fd, buffer, BUFFER_SIZE))
 	{
-		if (!buffer[0])
-			return (-1);
 		while (buffer[i] && i < BUFFER_SIZE)
 		{
 			if (!result)
@@ -106,8 +104,6 @@ char	*get_next_line(int fd)
 	ft_bzero(buffer[fd], BUFFER_SIZE);
 	if (get_buffer(fd, buffer[fd], &result))
 		return (get_result(result));
-	if (get_buffer(fd, buffer[fd], &result) == -1)
-		return (NULL);
 	result_str = get_result(result);
 	return (result_str);
 }

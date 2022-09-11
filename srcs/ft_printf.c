@@ -6,15 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 14:47:51 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/20 17:26:50 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:28:23 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 int	ft_get_var_type(char c, va_list args)
 {

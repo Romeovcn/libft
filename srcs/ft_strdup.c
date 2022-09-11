@@ -6,14 +6,10 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:39 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:56:57 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:18:35 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *source)
