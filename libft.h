@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:23:39 by rvincent          #+#    #+#             */
-/*   Updated: 2022/08/22 15:52:04 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:25:57 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int					ft_strmatch(char *str1, char *str2);
 int					ft_strncmp(const char *s1, const char *s2, size_t length);
 char				*ft_strnstr(const char *str1, const char *str2, size_t len);
 char				*ft_strrchr(const char *str, int c);
