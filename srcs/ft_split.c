@@ -38,7 +38,6 @@ static char	*get_next_word(char const *str, char charset)
 	while (str[i] && str[i] != charset)
 		i++;
 	word = malloc((i + 1) * sizeof(char));
-	// word = NULL;
 	if (word == NULL)
 		return (NULL);
 	i = 0;
