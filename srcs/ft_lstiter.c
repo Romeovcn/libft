@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:23:08 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/17 13:23:09 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:35 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

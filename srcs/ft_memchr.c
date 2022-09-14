@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:37:42 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:53:38 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:49 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *memoryBlock, int c, size_t size)
 {

@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:07:29 by rvincent          #+#    #+#             */
-/*   Updated: 2022/08/22 15:52:16 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:15:53 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
 long	ft_atoi(const char *str)
 {

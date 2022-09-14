@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:50:34 by rvincent          #+#    #+#             */
-/*   Updated: 2022/07/08 21:31:34 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:18:22 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
 static int	get_array_size(char const *str, char charset)
 {

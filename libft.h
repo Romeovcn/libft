@@ -6,7 +6,7 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 12:23:39 by rvincent          #+#    #+#             */
-/*   Updated: 2022/09/14 21:25:57 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:31:28 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <fcntl.h>
 # include <stdio.h>
-# include <stdlib.h>
 # include <stdlib.h>
 # include <sys/stat.h>
 # include <sys/types.h>

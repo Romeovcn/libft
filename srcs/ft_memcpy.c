@@ -6,14 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 13:20:21 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/12 17:43:19 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:55 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *destination, const void *source, size_t size)
 {

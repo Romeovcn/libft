@@ -6,11 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 14:48:05 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/20 14:50:23 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:18:18 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_putstr(char *s)
 {

@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 12:13:28 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/11 11:56:45 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:18:30 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

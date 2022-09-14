@@ -6,13 +6,11 @@
 /*   By: rvincent <rvincent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 13:23:32 by rvincent          #+#    #+#             */
-/*   Updated: 2022/05/17 13:23:37 by rvincent         ###   ########.fr       */
+/*   Updated: 2022/09/11 15:16:27 by rvincent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
